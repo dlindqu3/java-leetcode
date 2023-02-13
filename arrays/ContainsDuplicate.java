@@ -27,14 +27,16 @@ public class ContainsDuplicate {
             } else {
                 numCounts.put(currentNum, 1);
             }
-            for (Integer key : numCounts.keySet()) {
-                Integer currentVal = numCounts.get(key);
-                if (currentVal > 1) {
-                    System.out.println("true");
-                    return;
-                }
+        }
+
+        for (Integer key : numCounts.keySet()) {
+            Integer currentVal = numCounts.get(key);
+            if (currentVal > 1) {
+                System.out.println("true");
+                return;
             }
         }
+        
         System.out.println("false");
         return;
     }
